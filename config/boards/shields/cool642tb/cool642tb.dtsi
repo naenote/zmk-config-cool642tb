@@ -102,19 +102,9 @@
         status = "disabled";
     };
 
-    pmw3610: pmw3610@0 {
-        compatible = "pixart,pmw3610";
-        reg = <0>;  // ← 修正: サイズ定義は不要
-        spi-max-frequency = <2000000>;
-        cs-gpios = <&xiao_d 7 (GPIO_ACTIVE_LOW)>;     // CSピン
-        irq-gpios = <&xiao_d 4 (GPIO_ACTIVE_LOW)>;    // MOTIONピン（競合なし）
-        label = "PMW3610";
-        status = "okay";
-    };
-
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder &pmw3610>;
+        sensors = <&left_encoder &trackball>;
         triggers-per-rotation = <10>;
     };
 };
