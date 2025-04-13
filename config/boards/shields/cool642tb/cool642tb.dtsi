@@ -102,9 +102,21 @@
         status = "disabled";
     };
 
+    pmw3610: pmw3610@0 {
+        compatible = "pixart,pmw3610";
+        reg = <0>;  // CS=0番スレーブとして扱う
+        spi-max-frequency = <2000000>;
+
+        cs-gpios = <&xiao_d 7 (GPIO_ACTIVE_LOW)>;     // CSピン（任意）
+        irq-gpios = <&xiao_d 4 (GPIO_ACTIVE_LOW)>;    // IRQピン（任意）
+
+        label = "PMW3610";
+        status = "okay";
+    };
+
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder &right_encoder>;
+        sensors = <&left_encoder &pmw3610>;
         triggers-per-rotation = <10>;
     };
 };
