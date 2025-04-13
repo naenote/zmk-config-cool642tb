@@ -74,7 +74,8 @@
 &trans          &trans     &trans  &trans  &tog 0  &mkp LCLK  &lt 2 SPACE  &tog 1                                       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>,
+                              <&mkp MOVE_XY>;
         };
 
         SCROLL {
