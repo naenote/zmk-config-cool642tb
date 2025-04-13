@@ -102,13 +102,6 @@
         status = "disabled";
     };
 
-    /* SPIバス設定の修正を明示 */
-    &spi0 {
-        status = "okay";
-        #address-cells = <1>;
-        #size-cells = <0>;
-    };
-
     pmw3610: pmw3610@0 {
         compatible = "pixart,pmw3610";
         reg = <0>;  // ← 修正: サイズ定義は不要

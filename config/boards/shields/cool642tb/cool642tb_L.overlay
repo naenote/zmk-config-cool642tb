@@ -14,3 +14,9 @@
 &left_encoder {
     status = "okay";
 };
+
+&spi0 {
+    status = "okay";
+    #address-cells = <1>;
+    #size-cells = <0>;
+};
