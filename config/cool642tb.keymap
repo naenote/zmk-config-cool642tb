@@ -8,7 +8,7 @@
 #define NUM 6
 
 &mt {
-    flavor = "balanced";
+    flavor = "hold-preferred";
     quick-tap-ms = <0>;
 };
 
@@ -100,10 +100,10 @@
 
         ARROW {
             bindings = <
-&bt BT_CLR      &none         &none         &none         &none                         &none   &none   &none          &none      &kp PRINTSCREEN
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &none   &none   &none          &none      &none
-&kp LEFT_SHIFT  &kp LCTRL     &none         &none         &none         &trans  &trans  &trans  &trans  &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
-&trans          &trans        &trans        &trans        &trans        &trans  &trans  &trans                                    &trans
+&bt BT_CLR      &none         &none         &none         &none                         &none   &none  &none          &none      &kp PRINTSCREEN
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &none   &none  &none          &none      &none
+&kp LEFT_SHIFT  &kp LCTRL     &none         &none         &none         &trans  &trans  &none   &none  &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
+&trans          &trans        &trans        &trans        &trans        &trans  &trans  &trans                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -111,10 +111,10 @@
 
         MOUSE {
             bindings = <
-&kp Q       &kp W    &kp E             &kp R         &kp T                           &kp Y   &kp U      &mkp MCLK  &kp O      &kp P
-&kp A       &kp S    &kp D             &kp F         &kp G   &kp N1     &kp N2       &kp H   &mkp LCLK  &to 5      &mkp RCLK  &kp ENTER
-&kp Z       &kp X    &kp C             &kp V         &kp B   &kp N3     &kp N4       &kp N   &kp M      &mkp MB1   &mkp MB2   &kp SLASH
-&kp ESCAPE  &kp TAB  &kp LEFT_CONTROL  &kp LEFT_GUI  &tog 0  &mkp LCLK  &lt 2 SPACE  &tog 1                                   &kp LEFT_SHIFT
+&none           &none      &none   &none   &none                           &none   &none      &mkp MCLK      &none      &none
+&none           &none      &none   &none   &none   &none      &none        &none   &mkp LCLK  &to 5          &mkp RCLK  &none
+&kp LEFT_SHIFT  &kp LCTRL  &none   &none   &none   &none      &none        &none   &none      &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
+&trans          &trans     &trans  &trans  &tog 0  &mkp LCLK  &lt 2 SPACE  &tog 1                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -122,21 +122,10 @@
 
         SCROLL {
             bindings = <
-&kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&kp Z       &kp X      &kp C     &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
-            >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-        };
-
-        layer_6 {
-            bindings = <
-&kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&kp Z       &kp X      &kp C     &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
+&none           &none      &none   &none   &none                           &none   &none      &mkp MCLK      &none      &none
+&none           &none      &none   &none   &none   &none      &none        &none   &mkp LCLK  &to 5          &mkp RCLK  &none
+&kp LEFT_SHIFT  &kp LCTRL  &none   &none   &none   &none      &none        &none   &none      &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
+&trans          &trans     &trans  &trans  &tog 0  &mkp LCLK  &lt 2 SPACE  &tog 1                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
