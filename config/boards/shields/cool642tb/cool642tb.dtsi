@@ -102,12 +102,19 @@
         status = "disabled";
     };
 
+    /* SPIバス設定の修正を明示 */
+    &spi0 {
+        status = "okay";
+        #address-cells = <1>;
+        #size-cells = <0>;
+    };
+
     pmw3610: pmw3610@0 {
         compatible = "pixart,pmw3610";
-        reg = <0 0>;  // CS=0番スレーブとして扱う
+        reg = <0>;  // ← 修正: サイズ定義は不要
         spi-max-frequency = <2000000>;
-        cs-gpios = <&xiao_d 7 (GPIO_ACTIVE_LOW)>;     // CSピン（任意）
-        irq-gpios = <&xiao_d 4 (GPIO_ACTIVE_LOW)>;    // IRQピン（任意）
+        cs-gpios = <&xiao_d 7 (GPIO_ACTIVE_LOW)>;     // CSピン
+        irq-gpios = <&xiao_d 4 (GPIO_ACTIVE_LOW)>;    // MOTIONピン（競合なし）
         label = "PMW3610";
         status = "okay";
     };
