@@ -15,19 +15,15 @@
 / {
     combos { compatible = "zmk,combos"; };
 
-    macros { };
-
-    behaviors { };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
 &kp Q             &kp W        &kp E  &kp R  &kp T                                                   &kp Y        &kp U  &kp I                &kp O             &kp P
-&kp A             &kp S        &kp D  &kp F  &kp G        &none               &none                  &kp H        &kp J  &kp K                &kp L             &kp ENTER
+&kp A             &kp S        &kp D  &kp F  &kp G        &none               &none                  &kp H        &kp J  &kp K                &kp L             &kp MINUS
 &mt LEFT_SHIFT Z  &mt LCTRL X  &kp C  &kp V  &kp B        &none               &none                  &kp N        &kp M  &mt RIGHT_WIN COMMA  &mt RCTRL PERIOD  &mt RIGHT_SHIFT SLASH
-&none             &none        &none  &none  &lt 1 LANG2  &mt LEFT_ALT SPACE  &mt RIGHT_SHIFT SPACE  &lt 2 LANG1                                                &none
+&none             &none        &none  &none  &lt 1 LANG2  &mt LEFT_ALT SPACE  &mt RIGHT_SHIFT ENTER  &lt 2 LANG1                                                &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
