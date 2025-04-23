@@ -10,6 +10,7 @@
 &mt {
     flavor = "hold-preferred";
     quick-tap-ms = <0>;
+    tapping-term-ms = <150>;
 };
 
 / {
@@ -32,7 +33,7 @@
         FUNCTION {
             bindings = <
 &kp ESC         &mt LEFT_WIN TILDE  &kp ENTER      &kp SQT       &kp LEFT_PARENTHESIS                         &kp RIGHT_PARENTHESIS  &kp PAGE_UP     &kp UP_ARROW                  &kp PAGE_DOWN  &kp PLUS
-&kp DELETE      &kp TAB             &kp LC(SPACE)  &kp LEFT_ALT  &kp LA(LEFT_BRACKET)  &none   &none          &kp RIGHT_BRACKET      &kp LEFT_ARROW  &kp DOWN_ARROW                &kp RIGHT      &kp SEMICOLON
+&kp DELETE      &kp TAB             &kp LC(SPACE)  &kp LEFT_ALT  &kp LEFT_BRACKET      &none   &none          &kp RIGHT_BRACKET      &kp LEFT_ARROW  &kp DOWN_ARROW                &kp RIGHT      &kp SEMICOLON
 &kp LEFT_SHIFT  &kp LCTRL           &none          &kp LG(H)     &kp LEFT_BRACE        &none   &none          &kp RIGHT_BRACE        &kp HOME        &mt RIGHT_WIN K_CONTEXT_MENU  &mt RCTRL END  &mt RIGHT_SHIFT BACKSLASH
 &trans          &trans              &trans         &trans        &trans                &trans  &kp BACKSPACE  &lt 3 DELETE                                                                        &trans
             >;
@@ -64,10 +65,10 @@
 
         MOUSE {
             bindings = <
-&none           &none      &none   &none   &none                           &none   &none      &mkp MCLK      &none      &none
-&none           &none      &none   &none   &none   &none      &none        &none   &mkp LCLK  &mo 5          &mkp RCLK  &none
-&kp LEFT_SHIFT  &kp LCTRL  &none   &none   &none   &none      &none        &none   &none      &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
-&trans          &trans     &trans  &trans  &tog 0  &mkp LCLK  &lt 2 SPACE  &tog 1                                       &trans
+&none           &none      &none   &none   &none                          &none  &none      &mkp MCLK      &none      &none
+&none           &none      &none   &none   &none  &none      &none        &none  &mkp LCLK  &mo 5          &mkp RCLK  &none
+&kp LEFT_SHIFT  &kp LCTRL  &none   &none   &none  &none      &none        &none  &none      &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
+&trans          &trans     &trans  &trans  &to 1  &mkp LCLK  &lt 2 SPACE  &to 2                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -75,10 +76,10 @@
 
         SCROLL {
             bindings = <
-&none           &none      &none   &none   &none                           &none   &none      &mkp MCLK      &none      &none
-&none           &none      &none   &none   &none   &none      &none        &none   &mkp LCLK  &to 5          &mkp RCLK  &none
-&kp LEFT_SHIFT  &kp LCTRL  &none   &none   &none   &none      &none        &none   &none      &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
-&trans          &trans     &trans  &trans  &tog 0  &mkp LCLK  &lt 2 SPACE  &tog 1                                       &trans
+&none           &none      &none   &none   &none                          &none  &none      &mkp MCLK      &none      &none
+&none           &none      &none   &none   &none  &none      &none        &none  &mkp LCLK  &to 5          &mkp RCLK  &none
+&kp LEFT_SHIFT  &kp LCTRL  &none   &none   &none  &none      &none        &none  &none      &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
+&trans          &trans     &trans  &trans  &to 1  &mkp LCLK  &lt 2 SPACE  &to 2                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
