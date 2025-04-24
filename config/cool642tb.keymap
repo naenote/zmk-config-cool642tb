@@ -16,6 +16,15 @@
 / {
     combos { compatible = "zmk,combos"; };
 
+    macros {
+        ctrl_on_mouse_layer: ctrl_on_mouse_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp RIGHT_CONTROL>;
+            label = "CTRL_ON_MOUSE_LAYER";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -65,10 +74,10 @@
 
         MOUSE {
             bindings = <
-&kp Q             &kp W        &kp E   &kp R   &kp T                     &kp Y  &kp U      &mkp MCLK            &kp O             &kp P
-&kp A             &kp S        &kp D   &kp F   &kp G  &none      &none   &kp H  &mkp LCLK  &mo 5                &mkp RCLK         &kp MINUS
-&mt LEFT_SHIFT Z  &mt LCTRL X  &kp C   &kp V   &kp B  &none      &none   &kp N  &kp H      &mt RIGHT_GUI COMMA  &mt RCTRL PERIOD  &mt RIGHT_SHIFT SLASH
-&trans            &trans       &trans  &trans  &to 0  &mkp LCLK  &trans  &to 0                                                    &trans
+&kp Q             &kp W        &kp E   &kp R   &kp T                     &kp Y  &kp U      &mkp MCLK            &kp O                 &kp P
+&kp A             &kp S        &kp D   &kp F   &kp G  &none      &none   &kp H  &mkp LCLK  &mo 5                &mkp RCLK             &kp MINUS
+&mt LEFT_SHIFT Z  &mt LCTRL X  &kp C   &kp V   &kp B  &none      &none   &kp N  &kp H      &mt RIGHT_GUI COMMA  &ctrl_on_mouse_layer  &mt RIGHT_SHIFT SLASH
+&trans            &trans       &trans  &trans  &to 0  &mkp LCLK  &trans  &to 0                                                        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
