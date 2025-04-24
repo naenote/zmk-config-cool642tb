@@ -65,10 +65,10 @@
 
         MOUSE {
             bindings = <
-&none           &none      &none   &none   &none                     &none  &none      &mkp MCLK      &none      &none
-&none           &none      &none   &none   &none  &none      &none   &none  &mkp LCLK  &mo 5          &mkp RCLK  &none
-&kp LEFT_SHIFT  &kp LCTRL  &none   &none   &none  &none      &none   &none  &none      &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
-&trans          &trans     &trans  &trans  &to 0  &mkp LCLK  &trans  &to 0                                       &trans
+&kp Q             &kp W        &kp E   &kp R   &kp T                     &kp Y  &kp U      &mkp MCLK            &kp O             &kp P
+&kp A             &kp S        &kp D   &kp F   &kp G  &none      &none   &kp H  &mkp LCLK  &mo 5                &mkp RCLK         &kp MINUS
+&mt LEFT_SHIFT Z  &mt LCTRL X  &kp C   &kp V   &kp B  &none      &none   &kp N  &kp H      &mt RIGHT_GUI COMMA  &mt RCTRL PERIOD  &mt RIGHT_SHIFT SLASH
+&trans            &trans       &trans  &trans  &to 0  &mkp LCLK  &trans  &to 0                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -76,10 +76,10 @@
 
         SCROLL {
             bindings = <
-&none           &none      &none   &none   &none                     &none  &none      &mkp MCLK      &none      &none
-&none           &none      &none   &none   &none  &none      &none   &none  &mkp LCLK  &mo 5          &mkp RCLK  &none
-&kp LEFT_SHIFT  &kp LCTRL  &none   &none   &none  &none      &none   &none  &none      &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
-&trans          &trans     &trans  &trans  &to 0  &mkp LCLK  &trans  &to 0                                       &trans
+&kp Q             &kp W        &kp E   &kp R   &kp T                     &kp Y  &kp U      &mkp MCLK            &kp O             &kp P
+&kp A             &kp S        &kp D   &kp F   &kp G  &none      &none   &kp H  &mkp LCLK  &mo 5                &mkp RCLK         &kp MINUS
+&mt LEFT_SHIFT Z  &mt LCTRL X  &kp C   &kp V   &kp B  &none      &none   &kp N  &kp H      &mt RIGHT_GUI COMMA  &mt RCTRL PERIOD  &mt RIGHT_SHIFT SLASH
+&trans            &trans       &trans  &trans  &to 0  &mkp LCLK  &trans  &to 0                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
