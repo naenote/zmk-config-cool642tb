@@ -81,10 +81,10 @@
 
         MOUSE {
             bindings = <
-&none     &none    &none         &none         &none                         &none   &none      &mkp MCLK            &none                 &none
-&none     &none    &none         &none         &none  &none      &none   &none  &mkp LCLK  &mo 5                &mkp RCLK             &none
-&mt LEFT_SHIFT Z  &mt LCTRL X  &none     &none &none  &ret_kp A  &none   &none  &none      &mt RIGHT_GUI COMMA  &ctrl_on_mouse_layer  &mt RIGHT_SHIFT SLASH
-&trans            &trans       &trans  &trans  &mo 1  &mkp LCLK  &trans  &mo 2                                                        &trans
+&ret_kp Q       &ret_kp W  &ret_kp E  &ret_kp R  &ret_kp T                     &ret_kp Y  &ret_kp U  &mkp MCLK          &ret_kp O      &ret_kp P
+&ret_kp A       &ret_kp S  &ret_kp D  &ret_kp F  &ret_kp G  &trans     &trans  &ret_kp J  &mkp LCLK  &mo 5              &mkp RCLK      &ret_kp MINUS
+&kp LEFT_SHIFT  &kp LCTRL  &ret_kp C  &ret_kp V  &ret_kp B  &ret_kp A  &trans  &ret_kp N  &ret_kp M  &ret_kp RIGHT_GUI  &ret_kp RCTRL  &ret_kp RIGHT_SHIFT
+&trans          &trans     &trans     &trans     &to 1      &mkp LCLK  &trans  &to 2                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -92,10 +92,10 @@
 
         SCROLL {
             bindings = <
-&none     &none    &none         &none         &none                         &none   &none      &mkp MCLK            &none                 &none
-&none     &none    &none         &none         &none  &none      &none   &none  &mkp LCLK  &mo 5                &mkp RCLK             &none
-&mt LEFT_SHIFT Z  &mt LCTRL X  &none     &none &none  &ret_kp A  &none   &none  &none      &mt RIGHT_GUI COMMA  &ctrl_on_mouse_layer  &mt RIGHT_SHIFT SLASH
-&trans            &trans       &trans  &trans  &mo 1  &mkp LCLK  &trans  &mo 2                                                        &trans
+&ret_kp Q       &ret_kp W  &ret_kp E  &ret_kp R  &ret_kp T                     &ret_kp Y  &ret_kp U  &mkp MCLK          &ret_kp O      &ret_kp P
+&ret_kp A       &ret_kp S  &ret_kp D  &ret_kp F  &ret_kp G  &trans     &trans  &ret_kp J  &mkp LCLK  &mo 5              &mkp RCLK      &ret_kp MINUS
+&kp LEFT_SHIFT  &kp LCTRL  &ret_kp C  &ret_kp V  &ret_kp B  &ret_kp A  &trans  &ret_kp N  &ret_kp M  &ret_kp RIGHT_GUI  &ret_kp RCTRL  &ret_kp RIGHT_SHIFT
+&trans          &trans     &trans     &trans     &to 1      &mkp LCLK  &trans  &to 2                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
