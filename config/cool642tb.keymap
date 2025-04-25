@@ -17,18 +17,13 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
-        ctrl_on_mouse_layer: ctrl_on_mouse_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0 &kp RIGHT_CONTROL>;
-            label = "CTRL_ON_MOUSE_LAYER";
-        };
-
         ret_kp: ret_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&to 0 &macro_param_1to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
                 <&macro_release>,
