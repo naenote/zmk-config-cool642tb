@@ -26,6 +26,15 @@
                 <&macro_param_1to1 &macro_release &kp MACRO_PLACEHOLDER>;
             label = "RET_KP";
         };
+        
+        bt_switch: bt_switch {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&bt BT_DISC>,
+                <&macro_param_1to1 &bt BT_SEL MACRO_PLACEHOLDER>;
+            label = "RET_KP";
+        };
     };
 
     keymap {
@@ -67,7 +76,7 @@
         ARROW {
             bindings = <
 &none           &none         &none         &none         &none                             &none   &none  &none          &none      &kp PRINTSCREEN
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans  &none   &none  &none          &none      &none
+&bt_switch 0    &bt_switch 1  &bt_switch 2  &bt_switch 3  &bt_switch 4  &trans      &trans  &none   &none  &none          &none      &none
 &kp LEFT_SHIFT  &kp LCTRL     &none         &none         &none         &bt BT_CLR  &trans  &none   &none  &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
 &trans          &trans        &trans        &trans        &trans        &trans      &trans  &trans                                   &trans
             >;
