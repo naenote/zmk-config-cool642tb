@@ -39,9 +39,11 @@
             #binding-cells = <1>;
             wait-ms = <0>; tap-ms = <0>;
 
-            bindings = < &bt_disconnect >,
-                       < &macro_param_1to1 >,
-                       < &bt_sel MACRO_PLACEHOLDER >;
+            bindings =
+                /* 全て接続解除 */
+                <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 3>, <&bt BT_DISC 4>
+                /* 選択したプロファイルに接続 */
+                , <&macro_param_1to1>, <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
     };
 
