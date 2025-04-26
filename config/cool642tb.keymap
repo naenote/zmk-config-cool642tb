@@ -32,8 +32,8 @@
             #binding-cells = <1>;
             bindings =
                 <&bt BT_DISC>,
-                <&macro_param_1to1 &bt BT_SEL MACRO_PLACEHOLDER>;
-            label = "RET_KP";
+                <&macro_param_1to1 &macro_press &bt BT_SEL MACRO_PLACEHOLDER>;
+            label = "BT_SWITCH";
         };
     };
 
