@@ -16,7 +16,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        
+        /*
         reset_L {
             key-positions = <26 27>;
             bindings = <&sys_reset>;
@@ -25,6 +25,7 @@
             key-positions = <28 29>;
             bindings = <&sys_reset>;
         };
+        */k
     };
 
     macros {
