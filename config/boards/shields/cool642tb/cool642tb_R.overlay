@@ -20,6 +20,21 @@
         device = <&trackball>;
 
     };
+
+    pointing: pointing {
+        compatible = "zmk,pointing"; // ZMKのポインティングデバイス互換性
+        status = "okay"; // このノードを有効にする
+
+        // ポインティングサブシステムがどのハードウェアデバイスを使うかを指定
+        device = <&trackball>; // trackball: trackball@0 ノードを参照
+
+        // ★★ ここに motion-wait-ms を設定 ★★
+        motion-wait-ms = 10; // 例: 50ミリ秒。この値を調整してください。
+
+        // 必要に応じて他のポインティング関連設定を追加
+        // sensitivity = ; // 例: 感度調整（カーソル移動量）
+        // incline = ;       // 例: インクライン調整（トラックボールでは通常0）
+    };
 };
 
 &pinctrl {
@@ -60,8 +75,4 @@
         automouse-layer = <4>;
         scroll-layers = <5>;
     };
-};
-
-&pointing {
-    motion-wait-ms = 10;
 };
