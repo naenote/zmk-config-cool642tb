@@ -57,10 +57,10 @@
 
         FUNCTION {
             bindings = <
-&kp ESC         &mt LEFT_WIN TILDE  &kp ENTER      &kp SQT       &kp LEFT_PARENTHESIS                         &kp RIGHT_PARENTHESIS  &kp PAGE_UP     &kp UP_ARROW        &kp PAGE_DOWN  &kp EQUAL
-&kp DELETE      &kp TAB             &kp LANG1      &kp LEFT_ALT  &kp LEFT_BRACKET      &none   &none          &kp RIGHT_BRACKET      &kp LEFT_ARROW  &kp DOWN_ARROW      &kp RIGHT      &kp SEMICOLON
-&kp LEFT_SHIFT  &kp LCTRL           &kp LANG2      &kp LG(H)     &kp LEFT_BRACE        &none   &none          &kp RIGHT_BRACE        &kp HOME        &kp K_CONTEXT_MENU  &mt RCTRL END  &mt RIGHT_SHIFT BACKSLASH
-&trans          &trans              &trans         &trans        &trans                &trans  &kp BACKSPACE  &mo 3                                                                     &trans
+&kp ESC         &kp LEFT_WIN  &kp LANG2      &kp SQT       &kp LEFT_PARENTHESIS                         &kp RIGHT_PARENTHESIS  &kp PAGE_UP     &kp UP_ARROW        &kp PAGE_DOWN  &kp EQUAL
+&kp DELETE      &kp TAB       &kp LANG1      &kp LEFT_ALT  &kp LEFT_BRACKET      &none   &none          &kp RIGHT_BRACKET      &kp LEFT_ARROW  &kp DOWN_ARROW      &kp RIGHT      &kp SEMICOLON
+&kp LEFT_SHIFT  &kp LCTRL     &none          &kp LG(H)     &kp LEFT_BRACE        &none   &none          &kp RIGHT_BRACE        &kp HOME        &kp K_CONTEXT_MENU  &mt RCTRL END  &mt RIGHT_SHIFT BACKSLASH
+&trans          &trans        &trans         &trans        &trans                &trans  &kp BACKSPACE  &mo 3                                                                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
