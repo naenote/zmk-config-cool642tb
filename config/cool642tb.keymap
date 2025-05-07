@@ -49,10 +49,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W        &kp E  &kp R  &kp T                                                &kp Y    &kp U  &kp I                &kp O             &kp P
-&kp A             &kp S        &kp D  &kp F  &kp G  &none               &none                  &kp H    &kp J  &kp K                &kp L             &kp MINUS
-&mt LEFT_SHIFT Z  &mt LCTRL X  &kp C  &kp V  &kp B  &none               &none                  &kp N    &kp M  &mt RIGHT_WIN COMMA  &mt RCTRL PERIOD  &mt RIGHT_SHIFT SLASH
-&none             &none        &none  &none  &mo 3  &mt LEFT_ALT SPACE  &mt RIGHT_SHIFT ENTER  &mo 4                                                  &none
+&kp Q             &kp W        &kp E  &kp R  &kp T                                             &kp Y  &kp U  &kp I                &kp O             &kp P
+&kp A             &kp S        &kp D  &kp F  &kp G  &none               &none                  &kp H  &kp J  &kp K                &kp L             &kp MINUS
+&mt LEFT_SHIFT Z  &mt LCTRL X  &kp C  &kp V  &kp B  &none               &none                  &kp N  &kp M  &mt RIGHT_WIN COMMA  &mt RCTRL PERIOD  &mt RIGHT_SHIFT SLASH
+&none             &none        &none  &none  &mo 3  &mt LEFT_ALT SPACE  &mt RIGHT_SHIFT ENTER  &mo 4                                                &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -63,7 +63,7 @@
 &trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &mo 2      &mkp RCLK  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans                                   &trans
+&trans  &trans  &trans  &trans  &mo 3   &mkp LCLK  &trans  &mo 4                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -74,7 +74,7 @@
 &trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &none      &mkp RCLK  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans                                   &trans
+&trans  &trans  &trans  &trans  &mo 3   &mkp LCLK  &trans  &mo 4                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -104,10 +104,10 @@
 
         SYSTEM {
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none   &none  &none          &none      &none
-&none           &none         &none         &none         &none         &trans  &trans  &none   &none  &none          &none      &none
-&kp LEFT_SHIFT  &kp LCTRL     &none         &none         &bt BT_CLR    &trans  &trans  &none   &none  &kp RIGHT_WIN  &kp RCTRL  &kp RIGHT_SHIFT
-&trans          &trans        &trans        &trans        &trans        &trans  &trans  &trans                                   &trans
+&none         &none         &none         &none         &none                             &none   &none  &none  &none  &none
+&none         &none         &none         &none         &none         &trans      &trans  &none   &none  &none  &none  &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &trans  &none   &none  &none  &none  &none
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
