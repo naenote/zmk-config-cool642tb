@@ -42,6 +42,13 @@
             label = "RET_KP";
         };
         */
+
+        excl_mo: excl_mo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+            label = "EXCL_MO";
+        };
     };
 
     keymap {
@@ -49,10 +56,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W        &kp E  &kp R  &kp T                                             &kp Y  &kp U  &kp I                &kp O             &kp P
-&kp A             &kp S        &kp D  &kp F  &kp G  &none               &none                  &kp H  &kp J  &kp K                &kp L             &kp MINUS
-&mt LEFT_SHIFT Z  &mt LCTRL X  &kp C  &kp V  &kp B  &none               &none                  &kp N  &kp M  &mt RIGHT_WIN COMMA  &mt RCTRL PERIOD  &mt RIGHT_SHIFT SLASH
-&none             &none        &none  &none  &mo 3  &mt LEFT_ALT SPACE  &mt RIGHT_SHIFT ENTER  &mo 4                                                &none
+&kp Q             &kp W        &kp E  &kp R  &kp T                                                  &kp Y       &kp U  &kp I                &kp O             &kp P
+&kp A             &kp S        &kp D  &kp F  &kp G       &none               &none                  &kp H       &kp J  &kp K                &kp L             &kp MINUS
+&mt LEFT_SHIFT Z  &mt LCTRL X  &kp C  &kp V  &kp B       &none               &none                  &kp N       &kp M  &mt RIGHT_WIN COMMA  &mt RCTRL PERIOD  &mt RIGHT_SHIFT SLASH
+&none             &none        &none  &none  &excl_mo 3  &mt LEFT_ALT SPACE  &mt RIGHT_SHIFT ENTER  &excl_mo 4                                                &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -60,10 +67,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &mo 2      &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &mo 3   &mkp LCLK  &trans  &mo 4                                    &trans
+&trans  &trans  &trans  &trans  &trans                         &trans      &trans     &mkp MCLK  &trans     &trans
+&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &mkp LCLK  &mo 2      &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &excl_mo 3  &mkp LCLK  &trans  &excl_mo 4                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -71,10 +78,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &none      &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &mo 3   &mkp LCLK  &trans  &mo 4                                    &trans
+&trans  &trans  &trans  &trans  &trans                         &trans      &trans     &mkp MCLK  &trans     &trans
+&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &mkp LCLK  &none      &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &excl_mo 3  &mkp LCLK  &trans  &excl_mo 4                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -85,7 +92,7 @@
 &kp ESC         &mt LEFT_WIN GRAVE  &kp LANG2  &kp SQT       &kp LEFT_PARENTHESIS                         &kp RIGHT_PARENTHESIS  &kp PAGE_UP     &kp UP_ARROW        &kp PAGE_DOWN  &kp EQUAL
 &kp DELETE      &kp TAB             &kp LANG1  &kp LEFT_ALT  &kp LEFT_BRACKET      &none   &none          &kp RIGHT_BRACKET      &kp LEFT_ARROW  &kp DOWN_ARROW      &kp RIGHT      &kp SEMICOLON
 &kp LEFT_SHIFT  &kp LCTRL           &none      &kp LG(H)     &kp LEFT_BRACE        &none   &none          &kp RIGHT_BRACE        &kp HOME        &kp K_CONTEXT_MENU  &mt RCTRL END  &mt RIGHT_SHIFT BACKSLASH
-&trans          &trans              &trans     &trans        &trans                &trans  &kp BACKSPACE  &mo 5                                                                     &trans
+&trans          &trans              &trans     &trans        &trans                &trans  &kp BACKSPACE  &excl_mo 5                                                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -93,10 +100,10 @@
 
         NUM {
             bindings = <
-&kp F1              &kp F2         &kp F3        &kp F4        &kp F5                     &kp F6  &kp F7  &kp F8         &kp F9            &kp F10
-&kp NUMBER_1        &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp N5     &trans  &trans  &kp N6  &kp N7  &kp N8         &kp N9            &kp N0
-&mt LEFT_SHIFT F11  &mt LCTRL F12  &none         &kp TAB       &kp ENTER  &trans  &trans  &none   &none   &kp RIGHT_WIN  &mt RCTRL PERIOD  &kp RIGHT_SHIFT
-&trans              &trans         &trans        &trans        &mo 5      &trans  &trans  &trans                                           &trans
+&kp F1              &kp F2         &kp F3        &kp F4        &kp F5                      &kp F6  &kp F7  &kp F8         &kp F9            &kp F10
+&kp NUMBER_1        &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp N5      &trans  &trans  &kp N6  &kp N7  &kp N8         &kp N9            &kp N0
+&mt LEFT_SHIFT F11  &mt LCTRL F12  &none         &kp TAB       &kp ENTER   &trans  &trans  &none   &none   &kp RIGHT_WIN  &mt RCTRL PERIOD  &kp RIGHT_SHIFT
+&trans              &trans         &trans        &trans        &excl_mo 5  &trans  &trans  &trans                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
