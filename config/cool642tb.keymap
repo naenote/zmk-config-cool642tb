@@ -42,13 +42,6 @@
             label = "RET_KP";
         };
         */
-
-        excl_mo: excl_mo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
-            label = "EXCL_MO";
-        };
     };
 
     keymap {
@@ -67,10 +60,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &trans      &trans     &mkp MCLK  &trans     &trans
-&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &mkp LCLK  &mo 2      &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &excl_mo 3  &mkp LCLK  &trans  &excl_mo 4                                   &trans
+&trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &mo 2      &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &to 0   &mkp LCLK  &trans  &to 0                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -81,7 +74,7 @@
 &trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &none      &mkp RCLK  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans                                   &trans
+&trans  &trans  &trans  &trans  &to 0   &mkp LCLK  &trans  &to 0                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
