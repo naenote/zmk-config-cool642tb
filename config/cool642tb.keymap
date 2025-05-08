@@ -67,10 +67,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &trans      &trans     &mkp MCLK  &trans     &trans
-&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &mkp LCLK  &mo 2      &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &excl_mo 3  &mkp LCLK  &trans  &excl_mo 4                                   &trans
+&trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &mo 2      &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -78,10 +78,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &trans      &trans     &mkp MCLK  &trans     &trans
-&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &mkp LCLK  &none      &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans      &trans     &trans  &trans      &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &excl_mo 3  &mkp LCLK  &trans  &excl_mo 4                                   &trans
+&trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &none      &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
