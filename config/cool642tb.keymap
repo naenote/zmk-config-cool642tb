@@ -46,7 +46,15 @@
         excl_mo: excl_mo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+            bindings =
+                <&to 0 &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release>,
+                <&mo MACRO_PLACEHOLDER>;
+
             label = "EXCL_MO";
         };
     };
