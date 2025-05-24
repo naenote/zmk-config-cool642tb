@@ -10,11 +10,7 @@
 };
 
 / {
-    behaviors {
-        smart_trans = &smart_trans_behavior;
-    };
-
-    smart_trans_behavior: behavior_smart_trans {
+    smart_trans: smart_trans {
         compatible = "zmk,behavior-smart-trans";
         label = "SMART_TRANS";
     };
