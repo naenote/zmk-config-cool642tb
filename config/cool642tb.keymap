@@ -10,6 +10,15 @@
 };
 
 / {
+    behaviors {
+        smart_trans = &smart_trans_behavior;
+    };
+
+    smart_trans_behavior: behavior_smart_trans {
+        compatible = "zmk,behavior-smart-trans";
+        label = "SMART_TRANS";
+    };
+
     combos { compatible = "zmk,combos"; };
 
     macros {
@@ -71,10 +80,10 @@
 
         MOUSE {
             bindings = <
-&trans            &trans           &trans  &trans  &trans                        &trans     &trans     &mkp MCLK           &trans                &trans
-&trans            &trans           &trans  &trans  &trans     &trans     &trans  &trans     &mkp LCLK  &mo 5               &mkp RCLK             &trans
-&ret_mt LSHIFT Z  &ret_mt LCTRL X  &trans  &trans  &trans     &trans     &trans  &trans     &trans     &ret_mt RWIN COMMA  &ret_mt RCTRL PERIOD  &ret_mt RSHIFT SLASH
-&trans            &trans           &trans  &trans  &ret_mo 3  &mkp LCLK  &trans  &ret_mo 4                                                       &trans
+&smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans                              &smart_trans  &smart_trans  &mkp MCLK     &smart_trans  &smart_trans
+&smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &mkp LCLK     &mo 5         &mkp RCLK     &smart_trans
+&smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans
+&smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &mkp LCLK     &smart_trans  &smart_trans                                            &smart_trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -82,10 +91,10 @@
 
         SCROLL {
             bindings = <
-&trans            &trans           &trans  &trans  &trans                        &trans     &trans     &mkp MCLK           &trans                &trans
-&trans            &trans           &trans  &trans  &trans     &trans     &trans  &trans     &mkp LCLK  &mo 5               &mkp RCLK             &trans
-&ret_mt LSHIFT Z  &ret_mt LCTRL X  &trans  &trans  &trans     &trans     &trans  &trans     &trans     &ret_mt RWIN COMMA  &ret_mt RCTRL PERIOD  &ret_mt RSHIFT SLASH
-&trans            &trans           &trans  &trans  &ret_mo 3  &mkp LCLK  &trans  &ret_mo 4                                                       &trans
+&smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans                              &smart_trans  &smart_trans  &mkp MCLK     &smart_trans  &smart_trans
+&smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &mkp LCLK     &mo 5         &mkp RCLK     &smart_trans
+&smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans
+&smart_trans  &smart_trans  &smart_trans  &smart_trans  &smart_trans  &mkp LCLK     &smart_trans  &smart_trans                                            &smart_trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
