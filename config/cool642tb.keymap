@@ -12,6 +12,7 @@
 / {
     smart_trans: smart_trans {
         compatible = "zmk,behavior-smart-trans";
+        #binding-cells = <0>;
         label = "SMART_TRANS";
     };
 
