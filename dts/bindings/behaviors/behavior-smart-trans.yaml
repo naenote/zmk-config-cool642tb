@@ -1,0 +1,8 @@
+title: Smart Transparent Behavior
+compatible: "zmk,behavior-smart-trans"
+description: |
+  Deactivate all non-0 layers then re-fire the Layer-0 binding at the same
+  key position. Works with &mt / &mo, etc.
+properties:
+  "#binding-cells":
+    const: 0
