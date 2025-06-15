@@ -15,7 +15,14 @@
     };
 
     macros {
-        ret_kp: ret_kp {
+        /omit-if-no-ref/ to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+        
+        /omit-if-no-ref/ ret_kp: ret_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -26,8 +33,18 @@
                 <&macro_param_1to1>,
                 <&macro_release>,
                 <&kp MACRO_PLACEHOLDER>;
-
             label = "RET_KP";
+        };
+    };
+
+    behaviors {
+        /omit-if-no-ref/ lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -80,10 +97,10 @@
 
         MOUSE {
             bindings = <
-&ret_kp Q       &ret_kp W  &ret_kp E  &ret_kp R  &ret_kp T                     &ret_kp Y  &ret_kp U  &mkp MCLK          &ret_kp O      &ret_kp P
-&ret_kp A       &ret_kp S  &ret_kp D  &ret_kp F  &ret_kp G  &trans     &trans  &ret_kp J  &mkp LCLK  &mo 5              &mkp RCLK      &ret_kp MINUS
-&kp LEFT_SHIFT  &kp LCTRL  &ret_kp C  &ret_kp V  &ret_kp B  &ret_kp A  &trans  &ret_kp N  &ret_kp M  &ret_kp RIGHT_GUI  &ret_kp RCTRL  &ret_kp RIGHT_SHIFT
-&trans          &trans     &trans     &trans     &to 0      &mkp LCLK  &trans  &to 0                                                   &trans
+&trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &mo 5      &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -91,10 +108,10 @@
 
         SCROLL {
             bindings = <
-&ret_kp Q       &ret_kp W  &ret_kp E  &ret_kp R  &ret_kp T                     &ret_kp Y  &ret_kp U  &mkp MCLK          &ret_kp O      &ret_kp P
-&ret_kp A       &ret_kp S  &ret_kp D  &ret_kp F  &ret_kp G  &trans     &trans  &ret_kp J  &mkp LCLK  &mo 5              &mkp RCLK      &ret_kp MINUS
-&kp LEFT_SHIFT  &kp LCTRL  &ret_kp C  &ret_kp V  &ret_kp B  &ret_kp A  &trans  &ret_kp N  &ret_kp M  &ret_kp RIGHT_GUI  &ret_kp RCTRL  &ret_kp RIGHT_SHIFT
-&trans          &trans     &trans     &trans     &to 0      &mkp LCLK  &trans  &to 0                                                   &trans
+&trans  &trans  &trans  &trans  &trans                     &trans  &trans     &mkp MCLK  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mkp LCLK  &mo 5      &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
